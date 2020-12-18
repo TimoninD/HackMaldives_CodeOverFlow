@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/signInFragment">
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.signin.SignInFragment">
+        <action
+            android:id="@+id/action_signInFragment_to_codeConfirmationFragment"
+            app:destination="@id/codeConfirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/codeConfirmationFragment"
+        android:label="CodeConfirmationFragment">
+        <argument
+            android:name="phone"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_codeConfirmationFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/homeFragment" />
+
+</navigation>
