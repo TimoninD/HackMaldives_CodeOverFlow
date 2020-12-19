@@ -3,6 +3,7 @@
 
     <string name="price_range">$%d - %d$</string>
     <string name="common_next">Next</string>
+    <string name="common_change">Change</string>
 
     <string name="start_hello">Hi, friend!</string>
     <string name="start_title">Travel with us!</string>
@@ -20,4 +21,12 @@
     <string name="bottom_menu_profile">Profile</string>
     <string name="budget_title">Select your budget</string>
     <string name="tour_detail_description_label">Description:</string>
+
+    <string name="week_sunday">S</string>
+    <string name="week_monday">M</string>
+    <string name="week_tuesday">T</string>
+    <string name="week_wednesday">W</string>
+    <string name="week_thursday">T</string>
+    <string name="week_friday">F</string>
+    <string name="week_saturday">S</string>
 </resources>
