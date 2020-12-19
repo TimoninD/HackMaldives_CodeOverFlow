@@ -6,7 +6,11 @@
 
     <fragment
         android:id="@+id/budgetFragment"
-        android:name="ru.codeoverflow.junctionhack.ui.fragment.budget.BudgetFragment" />
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.budget.BudgetFragment" >
+        <action
+            android:id="@+id/action_budgetFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/signInFragment"

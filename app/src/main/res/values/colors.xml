@@ -10,7 +10,7 @@
     
     <color name="purple_f5f">#F5F2FF</color>
     <color name="gray_disabled">#9B98A3</color>
-    <color name="purple_b09">#B09CFF</color>
+    <color name="main_color">#B09CFF</color>
     <color name="title_color">#363247</color>
     <color name="hint_color">#50363247</color>
 </resources>

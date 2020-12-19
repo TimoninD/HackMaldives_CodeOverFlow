@@ -12,6 +12,8 @@ fun toursAdapterDelegate() = adapterDelegate<TourModel, TourModel>(R.layout.rv_t
             ivIcon.setImageResource(R.drawable.start_image)
             tvTitle.text = item.title
             tvDescription.text = item.description
+            tvType.text = item.type
+            ratingBar.rating = 3f
         }
     }
 }

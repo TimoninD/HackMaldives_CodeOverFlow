@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@color/black"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_goneMarginTop="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvType"
+            style="@style/TextViewSize16WhiteSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivClose"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivClose"
+            tools:text="Sights" />
+
+
+        <TextView
+            android:id="@+id/tvRating"
+            style="@style/TextViewSize18WhiteRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/tours_rating"
+            app:layout_constraintBottom_toTopOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="@id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextViewSize29WhiteBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Masjidhul Aisha" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            style="@style/RatingBarWhite"
+            android:stepSize="1"
+            android:rating="3"
+            android:isIndicator="true"
+            app:layout_constraintBottom_toBottomOf="@id/tvRating"
+            app:layout_constraintStart_toEndOf="@id/tvRating"
+            app:layout_constraintTop_toTopOf="@id/tvRating" />
+
+        <View
+            android:id="@+id/viewBackground"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_purple_start"
+            android:paddingBottom="24dp"
+            android:translationY="-24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon" />
+
+
+        <TextView
+            android:id="@+id/tvDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon"
+            android:layout_marginTop="12dp"
+            style="@style/TextViewSize18Hint"
+            android:text="@string/tour_detail_description_label"
+            android:layout_marginStart="16dp" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextViewSize16BlackRegular"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionLabel"
+            android:layout_marginTop="9dp"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Biggest mosque in Ari Atoll of Maldives. The mosque is an architectural landmark in Thoddoo. The mosque is built by Maldivian business tycoon Qasim Ibrahim. The mosque is named after one of his wife. The two story mosque is becoming a tourist attraction due to its unique architecture. The magnificent golden dome of the mosque standout as are also the interior wall decorated with beautiful Arabic calligraphy."/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -2,6 +2,7 @@ package ru.codeoverflow.junctionhack.ui.fragment.budget
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_budget.*
 import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.R
@@ -13,8 +14,14 @@ class BudgetFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        btnNext.setOnClickListener {
+        tvPriceRange.text = getString(
+            R.string.price_range,
+            seekBarPrice.getCurrentStartValue(),
+            seekBarPrice.getCurrentEndValue()
+        )
 
+        btnNext.setOnClickListener {
+            findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToSignInFragment())
         }
 
         seekBarPrice.setOnRubberRangePickerChangeListener(object :
