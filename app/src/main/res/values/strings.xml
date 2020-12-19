@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">JunctionHack</string>
-    <string name="sign_in_button">Войти</string>
+
+    <string name="price_range">$%d - %d$</string>
+
+    <string name="start_hello">Hi, friend!</string>
+    <string name="start_title">Travel with us!</string>
+
+    <string name="sign_in_button">Login now</string>
+    <string name="sign_in_phone_number">Phone number</string>
+
+    <string name="confirm_code_label">Code number</string>
+
+    <string name="tours_title">Your tours</string>
+    <string name="tours_hint">Where would you like to go?</string>
+
+    <string name="bottom_menu_tours">Your tours</string>
+    <string name="bottom_menu_profile">Profile</string>
+    <string name="budget_title">Select your budget</string>
+    <string name="common_next">Next</string>
 </resources>

@@ -50,40 +50,42 @@
             app:layout_constraintTop_toBottomOf="@id/tvHello" />
 
         <TextView
-            android:id="@+id/tvLabel"
+            android:id="@+id/tvLabelCode"
             style="@style/LabelText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:labelFor="@id/etPhoneNumber"
-            android:text="@string/sign_in_phone_number"
-            app:layout_constraintStart_toStartOf="@id/etPhoneNumber"
+            android:text="@string/confirm_code_label"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
             app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-        <EditText
-            android:id="@+id/etPhoneNumber"
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/etPinCode"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="8dp"
-            android:inputType="phone"
-            app:layout_constraintTop_toBottomOf="@id/tvLabel" />
-
-        <Button
-            android:id="@+id/btnSignIn"
-            style="@style/BaseButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/sign_in_button"
-            app:layout_constraintTop_toBottomOf="@id/etPhoneNumber" />
+            android:cursorVisible="true"
+            android:digits="1234567890"
+            android:fontFamily="@font/monsterrat_extrabold"
+            android:inputType="number"
+            android:maxLength="4"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:textColor="@color/title_color"
+            android:textIsSelectable="false"
+            android:textSize="35sp"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelCode"
+            app:pinBackgroundDrawable="@drawable/bg_pin"
+            app:pinBackgroundIsSquare="false"
+            app:pinTextBottomPadding="24dp" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
+            app:layout_constraintTop_toBottomOf="@id/etPinCode"
+            android:layout_marginTop="32dp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.core.widget.NestedScrollView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseRegular">
+        <item name="android:fontFamily">@font/monsterrat_regular</item>
+    </style>
+
+    <style name="BaseBold">
+        <item name="android:fontFamily">@font/monsterrat_bold</item>
+    </style>
+
+    <style name="BaseExtraBold">
+        <item name="android:fontFamily">@font/monsterrat_extrabold</item>
+    </style>
+
+    <style name="TitleText" parent="BaseExtraBold">
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+
+    <style name="HintText" parent="BaseRegular">
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SubTitleText" parent="BaseExtraBold">
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="LabelText" parent="BaseRegular">
+        <item name="android:textColor">@color/hint_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="TextViewSize14BlackBold" parent="BaseBold">
+        <item name="android:textColor">@color/title_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextViewSize12Hint" parent="HintText">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextViewSize18Hint" parent="HintText">
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

@@ -32,14 +32,10 @@ class MainActivity : AppCompatActivity() {
                 navController.graph = navGraph
             }
             else -> {
-                navGraph.startDestination = R.id.signInFragment
+                navGraph.startDestination = R.id.budgetFragment
                 navController.graph = navGraph
             }
         }
-        mainActivityNavHostFragment.findNavController()
-            .addOnDestinationChangedListener { _, destination, _ ->
-                /*toolbar.isVisible = !listWithoutToolbar.contains(destination.id)*/
-            }
     }
 
     override fun onStop() {

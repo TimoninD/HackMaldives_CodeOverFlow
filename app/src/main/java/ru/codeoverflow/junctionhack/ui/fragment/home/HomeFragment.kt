@@ -56,9 +56,8 @@ class HomeFragment : BaseFragment() {
         bottomMenu.removePaddingFromNavigationItem()
 
         val navGraphIds = listOf(
-            R.navigation.address,
-            R.navigation.scanner,
-            R.navigation.statistic
+            R.navigation.tours,
+            R.navigation.profile
         )
 
         val controller = bottomMenu.setupWithNavController(

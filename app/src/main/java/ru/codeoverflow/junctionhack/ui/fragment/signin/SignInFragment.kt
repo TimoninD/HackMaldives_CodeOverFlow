@@ -2,6 +2,7 @@ package ru.codeoverflow.junctionhack.ui.fragment.signin
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.R
@@ -13,7 +14,7 @@ class SignInFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnSignIn.setOnClickListener {
-
+            findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToConfirmCodeFragment())
         }
 
     }

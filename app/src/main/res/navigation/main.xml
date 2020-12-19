@@ -2,28 +2,31 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
-    app:startDestination="@id/signInFragment">
+    app:startDestination="@id/budgetFragment">
+
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.budget.BudgetFragment" />
 
     <fragment
         android:id="@+id/signInFragment"
         android:name="ru.codeoverflow.junctionhack.ui.fragment.signin.SignInFragment">
+
         <action
-            android:id="@+id/action_signInFragment_to_codeConfirmationFragment"
-            app:destination="@id/codeConfirmationFragment" />
+            android:id="@+id/action_signInFragment_to_confirmCodeFragment"
+            app:destination="@id/confirmCodeFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/codeConfirmationFragment"
-        android:label="CodeConfirmationFragment">
-        <argument
-            android:name="phone"
-            app:argType="string"
-            app:nullable="false" />
+        android:id="@+id/confirmCodeFragment"
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.confirmcode.ConfirmCodeFragment">
         <action
-            android:id="@+id/action_codeConfirmationFragment_to_homeFragment"
+            android:id="@+id/action_confirmCodeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 
-    <fragment android:id="@+id/homeFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.home.HomeFragment" />
 
 </navigation>
