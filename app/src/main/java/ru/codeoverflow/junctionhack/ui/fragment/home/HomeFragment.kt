@@ -2,6 +2,7 @@ package ru.codeoverflow.junctionhack.ui.fragment.home
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.view.isVisible
 import androidx.core.view.updatePadding
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -26,6 +27,10 @@ class HomeFragment : BaseFragment() {
 
     private var navScopesIds: HashSet<String> = hashSetOf()
 
+    private val listWithoutBottomMenu =
+        listOf(
+            R.id.detailTourFragment
+        )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -70,6 +75,7 @@ class HomeFragment : BaseFragment() {
         controller.observe(viewLifecycleOwner, Observer { navController ->
 
             currentNavController?.value?.addOnDestinationChangedListener { controller, destination, arguments ->
+                bottomMenu.isVisible = !listWithoutBottomMenu.contains(destination.id)
                 val navScopeId = getNavScopeName(controller.graph.label ?: "")
 
                 val navigatorScope =

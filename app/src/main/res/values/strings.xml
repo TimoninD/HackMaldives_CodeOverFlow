@@ -2,8 +2,10 @@
     <string name="app_name">JunctionHack</string>
 
     <string name="price_range">$%d - %d$</string>
+    <string name="common_price">%d$</string>
     <string name="common_next">Next</string>
     <string name="common_change">Change</string>
+    <string name="common_date">%d %s</string>
 
     <string name="start_hello">Hi, friend!</string>
     <string name="start_title">Travel with us!</string>
@@ -29,4 +31,9 @@
     <string name="week_thursday">T</string>
     <string name="week_friday">F</string>
     <string name="week_saturday">S</string>
+    <string name="tour_detail_include_title">What\'s included in the tour?</string>
+    <string name="tour_detail_participants">Number of participants:</string>
+    <string name="tour_detail_tickets_title">Tickets for this tour (included in the price)</string>
+    <string name="tours_price">Total Price:</string>
+    <string name="tours_date_hint">DD-MM</string>
 </resources>

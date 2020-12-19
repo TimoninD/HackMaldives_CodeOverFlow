@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_f5f"
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,13 +23,13 @@
             android:id="@+id/ivClose"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            app:layout_goneMarginTop="16dp"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="16dp"
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="16dp" />
 
         <TextView
             android:id="@+id/tvType"
@@ -65,13 +66,13 @@
 
         <androidx.appcompat.widget.AppCompatRatingBar
             android:id="@+id/ratingBar"
+            style="@style/RatingBarWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
-            style="@style/RatingBarWhite"
-            android:stepSize="1"
-            android:rating="3"
             android:isIndicator="true"
+            android:rating="3"
+            android:stepSize="1"
             app:layout_constraintBottom_toBottomOf="@id/tvRating"
             app:layout_constraintStart_toEndOf="@id/tvRating"
             app:layout_constraintTop_toTopOf="@id/tvRating" />
@@ -89,26 +90,80 @@
 
         <TextView
             android:id="@+id/tvDescriptionLabel"
+            style="@style/TextViewSize18Hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivIcon"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="12dp"
-            style="@style/TextViewSize18Hint"
             android:text="@string/tour_detail_description_label"
-            android:layout_marginStart="16dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIcon" />
 
         <TextView
             android:id="@+id/tvDescription"
+            style="@style/TextViewSize16BlackRegular"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            style="@style/TextViewSize16BlackRegular"
-            app:layout_constraintTop_toBottomOf="@id/tvDescriptionLabel"
-            android:layout_marginTop="9dp"
             android:layout_marginHorizontal="16dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="9dp"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Biggest mosque in Ari Atoll of Maldives. The mosque is an architectural landmark in Thoddoo. The mosque is built by Maldivian business tycoon Qasim Ibrahim. The mosque is named after one of his wife. The two story mosque is becoming a tourist attraction due to its unique architecture. The magnificent golden dome of the mosque standout as are also the interior wall decorated with beautiful Arabic calligraphy."/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescriptionLabel"
+            tools:text="Biggest mosque in Ari Atoll of Maldives. The mosque is an architectural landmark in Thoddoo. The mosque is built by Maldivian business tycoon Qasim Ibrahim. The mosque is named after one of his wife. The two story mosque is becoming a tourist attraction due to its unique architecture. The magnificent golden dome of the mosque standout as are also the interior wall decorated with beautiful Arabic calligraphy." />
 
+        <TextView
+            android:id="@+id/tvParticipantsTitle"
+            style="@style/TextViewSize18Hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tour_detail_participants"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+        <TextView
+            android:id="@+id/tvParticipants"
+            style="@style/TextViewSize16BlackRegular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvParticipantsTitle"
+            tools:text="Tour price is for one person" />
+
+        <TextView
+            android:id="@+id/tvIncludeTitle"
+            style="@style/TextViewSize18Hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tour_detail_include_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvParticipants" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTourStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/tvIncludeTitle"
+            tools:itemCount="5"
+            tools:listitem="@layout/rv_detail_tour_item" />
+
+        <TextView
+            android:id="@+id/tvTicketsTitle"
+            style="@style/TextViewSize18Hint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/tour_detail_tickets_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvTourStep" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

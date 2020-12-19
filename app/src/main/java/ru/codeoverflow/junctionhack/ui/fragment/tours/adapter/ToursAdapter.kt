@@ -12,18 +12,23 @@ import java.time.YearMonth
 import java.time.format.TextStyle
 import java.util.*
 
-fun toursAdapterDelegate() = adapterDelegate<TourModel, TourModel>(R.layout.rv_tours_item) {
+fun toursAdapterDelegate(onClick: (TourModel) -> Unit) =
+    adapterDelegate<TourModel, TourModel>(R.layout.rv_tours_item) {
 
-    bind {
-        with(itemView) {
-            ivIcon.setImageResource(R.drawable.start_image)
-            tvTitle.text = item.title
-            tvDescription.text = item.description
-            tvType.text = item.type
-            ratingBar.rating = 3f
+        bind {
+            with(itemView) {
+                ivIcon.setImageResource(R.drawable.start_image)
+                tvTitle.text = item.title
+                tvDescription.text = item.description
+                tvType.text = item.type
+                ratingBar.rating = item.rating.toFloat()
+                tvPrice.text = getString(R.string.common_price, item.price)
+                setOnClickListener {
+                    onClick.invoke(item)
+                }
+            }
         }
     }
-}
 
 var monthSelectedPosition = 0
 

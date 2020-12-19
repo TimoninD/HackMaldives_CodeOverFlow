@@ -46,7 +46,7 @@ class StartSnapHelper : LinearSnapHelper() {
     }
 
     private fun distanceToStart(targetView: View, helper: OrientationHelper?): Int {
-        return helper!!.getDecoratedStart(targetView) - helper.startAfterPadding
+        return (helper?.getDecoratedStart(targetView) ?: 0) - (helper?.startAfterPadding ?: 0)
     }
 
     private fun getStartView(
@@ -63,8 +63,10 @@ class StartSnapHelper : LinearSnapHelper() {
                 return null
             }
             val child: View? = layoutManager.findViewByPosition(firstChild)
-            return if (helper!!.getDecoratedEnd(child) >= helper.getDecoratedMeasurement(child) / 2
-                && helper.getDecoratedEnd(child) > 0
+            return if ((helper?.getDecoratedEnd(child) ?: 0) >= (helper?.getDecoratedMeasurement(
+                    child
+                ) ?: 0) / 2
+                && (helper?.getDecoratedEnd(child) ?: 0) > 0
             ) {
                 child
             } else {

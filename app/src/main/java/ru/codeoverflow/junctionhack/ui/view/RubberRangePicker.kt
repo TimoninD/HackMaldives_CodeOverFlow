@@ -1,4 +1,4 @@
-package ru.codeoverflow.junctionhack.ui
+package ru.codeoverflow.junctionhack.ui.view
 
 import com.jem.rubberpicker.ElasticBehavior
 import com.jem.rubberpicker.convertDpToPx

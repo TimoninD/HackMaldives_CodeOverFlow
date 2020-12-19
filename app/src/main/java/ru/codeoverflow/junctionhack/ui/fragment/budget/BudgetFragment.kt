@@ -6,7 +6,7 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_budget.*
 import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.R
-import ru.codeoverflow.junctionhack.ui.RubberRangePicker
+import ru.codeoverflow.junctionhack.ui.view.RubberRangePicker
 
 class BudgetFragment : BaseFragment() {
     override val layoutResId: Int = R.layout.fragment_budget
