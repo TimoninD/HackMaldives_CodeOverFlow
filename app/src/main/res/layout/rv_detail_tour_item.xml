@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTopLine"
+        tools:src="@drawable/budget_image" />
+
+    <View
+        android:id="@+id/viewTopLine"
+        android:layout_width="2dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toEndOf="@id/ivIcon"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/ivOval"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_detail_tour_image"
+        app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+        app:layout_constraintEnd_toEndOf="@id/ivIcon"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/ivIcon" />
+
+    <View
+        android:id="@+id/viewBottomLine"
+        android:layout_width="2dp"
+        android:layout_height="16dp"
+        android:background="@color/main_color"
+        app:layout_constraintEnd_toEndOf="@id/ivIcon"
+        app:layout_constraintStart_toStartOf="@id/ivIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivOval" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/TextViewSize12Hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@id/viewBottomLine"
+        app:layout_constraintStart_toStartOf="@id/viewBottomLine"
+        app:layout_constraintTop_toBottomOf="@id/viewBottomLine"
+        tools:text="20 December 2020" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TextViewSize14BlackBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivIcon"
+        app:layout_constraintTop_toTopOf="@id/ivIcon"
+        tools:text="Big sandy beach" />
+
+    <TextView
+        style="@style/TextViewSize12Hint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="A wonderful place to relax and enjoy the beautiful sea of the Maldives. The water is very clean, the sand is perfectly white, the beach is monitored, and work is constantly being done to remove plants and household waste." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

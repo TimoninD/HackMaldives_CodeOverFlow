@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/budgetFragment"
-        android:name="ru.codeoverflow.junctionhack.ui.fragment.budget.BudgetFragment" >
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.budget.BudgetFragment">
         <action
             android:id="@+id/action_budgetFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
@@ -24,6 +24,9 @@
     <fragment
         android:id="@+id/confirmCodeFragment"
         android:name="ru.codeoverflow.junctionhack.ui.fragment.confirmcode.ConfirmCodeFragment">
+        <argument
+            android:name="phone"
+            app:argType="string" />
         <action
             android:id="@+id/action_confirmCodeFragment_to_homeFragment"
             app:destination="@id/homeFragment" />

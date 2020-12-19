@@ -109,5 +109,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             tools:text="Biggest mosque in Ari Atoll of Maldives. The mosque is an architectural landmark in Thoddoo. The mosque is built by Maldivian business tycoon Qasim Ibrahim. The mosque is named after one of his wife. The two story mosque is becoming a tourist attraction due to its unique architecture. The magnificent golden dome of the mosque standout as are also the interior wall decorated with beautiful Arabic calligraphy."/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
