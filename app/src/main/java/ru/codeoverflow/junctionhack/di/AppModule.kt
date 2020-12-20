@@ -18,7 +18,7 @@ val appModule = module {
     single { Prefs(androidContext()) }
 
     //Paper
-    single { Cache.PaperCache() }
+    single<Cache> { Cache.PaperCache() }
 }
 
 //Navigation

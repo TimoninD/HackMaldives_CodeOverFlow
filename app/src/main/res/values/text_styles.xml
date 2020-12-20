@@ -71,6 +71,11 @@
         <item name="android:textColor">@color/main_color</item>
     </style>
 
+    <style name="TextViewSize11TitleBold" parent="BaseBold">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">@color/title_color</item>
+    </style>
+
     <style name="TextViewSize18MainBold" parent="BaseBold">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/main_color</item>

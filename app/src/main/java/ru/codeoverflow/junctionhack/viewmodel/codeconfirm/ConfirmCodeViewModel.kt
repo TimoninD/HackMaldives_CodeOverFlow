@@ -31,7 +31,10 @@ class ConfirmCodeViewModel : BaseViewModel() {
                 var user = interactor.getUser()
 
                 cache.interests?.let {
-                    user = user?.copy(interests = cache.interests ?: listOf())
+                    user = user?.copy(
+                        interests = cache.interests ?: listOf(),
+                        budget = prefs.budget
+                    )
                     cache.interests = null
                     interactor.updateUser(user)
                 }

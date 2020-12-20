@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="12dp">
+
+    <ImageView
+        android:id="@+id/ivItem"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/diving" />
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_interest_image"
+        app:layout_constraintBottom_toBottomOf="@id/ivItem"
+        app:layout_constraintEnd_toEndOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="@id/ivItem"
+        app:layout_constraintTop_toTopOf="@id/ivItem" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/TextViewSize11TitleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@id/ivItem"
+        app:layout_constraintStart_toStartOf="@id/ivItem"
+        app:layout_constraintTop_toBottomOf="@id/ivItem"
+        tools:text="Diving" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

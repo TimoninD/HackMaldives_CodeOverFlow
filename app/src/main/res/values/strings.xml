@@ -6,6 +6,7 @@
     <string name="common_next">Next</string>
     <string name="common_change">Change</string>
     <string name="common_date">%d %s</string>
+    <string name="common_search">Search</string>
 
     <string name="start_hello">Hi, friend!</string>
     <string name="start_title">Travel with us!</string>
@@ -42,6 +43,7 @@
     <string name="week_saturday">S</string>
     <string name="profile_tickets_title">My tickets</string>
     <string name="profile_favorite_title">A wish list</string>
+    <string name="interests_title">Select topics of interest</string>
 
 
 </resources>

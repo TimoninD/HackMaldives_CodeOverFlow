@@ -26,7 +26,7 @@ class BudgetFragment : BaseFragment() {
 
         btnNext.setOnClickListener {
             prefs.budget = seekBarPrice.getCurrentEndValue()
-            prefs.isBudgetShow = true
+            //prefs.isBudgetShow = true
             findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToSignInFragment())
         }
 

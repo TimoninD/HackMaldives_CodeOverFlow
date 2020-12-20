@@ -5,6 +5,14 @@
     app:startDestination="@id/budgetFragment">
 
     <fragment
+        android:id="@+id/interestsFragment"
+        android:name="ru.codeoverflow.junctionhack.ui.fragment.interests.InterestsFragment" >
+        <action
+            android:id="@+id/action_interestsFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+    </fragment>
+
+    <fragment
         android:id="@+id/budgetFragment"
         android:name="ru.codeoverflow.junctionhack.ui.fragment.budget.BudgetFragment">
         <action

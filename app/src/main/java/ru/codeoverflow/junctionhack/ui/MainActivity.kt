@@ -16,8 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     private val prefs: Prefs by inject()
 
-    //private val listWithoutToolbar = listOf(R.id.signInFragment, R.id.homeFragment)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,15 +25,12 @@ class MainActivity : AppCompatActivity() {
         val navGraph = graphInflater.inflate(R.navigation.main)
         val navController = navHostFragment.navController
         when {
-            prefs.token != null -> {
-                navGraph.startDestination = R.id.homeFragment
-                navController.graph = navGraph
-            }
-            else -> {
-                navGraph.startDestination = R.id.budgetFragment
-                navController.graph = navGraph
-            }
+            !prefs.isTestShow -> navGraph.startDestination = R.id.interestsFragment
+            !prefs.isBudgetShow -> navGraph.startDestination = R.id.budgetFragment
+            prefs.token != null -> navGraph.startDestination = R.id.homeFragment
+            else -> navGraph.startDestination = R.id.budgetFragment
         }
+        navController.graph = navGraph
     }
 
     override fun onStop() {
