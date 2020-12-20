@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="12dp">
+
+    <ImageView
+        android:id="@+id/viewItem"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/cardview_dark_background" />
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_interest_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/viewItem"
+        app:layout_constraintEnd_toEndOf="@id/viewItem"
+        app:layout_constraintStart_toStartOf="@id/viewItem"
+        app:layout_constraintTop_toTopOf="@id/viewItem" />
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/TextViewSize11TitleBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="6dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewItem"
+        app:layout_constraintEnd_toEndOf="@id/viewItem"
+        app:layout_constraintStart_toStartOf="@id/viewItem"
+        app:layout_constraintTop_toTopOf="@id/viewItem"
+        tools:text="More: Excursion tours" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

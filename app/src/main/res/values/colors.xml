@@ -8,11 +8,24 @@
     <color name="black">#FF000000</color>
     <color name="black_50">#50000000</color>
     <color name="white">#FFFFFFFF</color>
-    
+
     <color name="purple_f5f">#F5F2FF</color>
     <color name="gray_disabled">#9B98A3</color>
     <color name="main_color">#B09CFF</color>
     <color name="main_color_50">#50B09CFF</color>
     <color name="title_color">#363247</color>
     <color name="hint_color">#50363247</color>
+
+    <color name="teal_48d_50">#5048DEFF</color>
+    <color name="teal_477">#477887</color>
+
+    <color name="purple_485_50">#50485BFF</color>
+    <color name="purple_4a5">#4A509C</color>
+
+    <color name="red_ff4_50">#50FF4848</color>
+    <color name="red_9f4">#9F4E53</color>
+    
+    <color name="orange_ffa_50">#50FFA654</color>
+    <color name="orange_7d6">#7D6045</color>
+
 </resources>
