@@ -5,6 +5,6 @@ import ru.codeoverflow.junctionhack.model.interactor.AuthInteractor
 import ru.codeoverflow.junctionhack.model.interactor.ToursInteractor
 
 val interactorModule = module {
-    factory { ToursInteractor(get()) }
+    factory { ToursInteractor(get(), get()) }
     factory { AuthInteractor(get()) }
 }

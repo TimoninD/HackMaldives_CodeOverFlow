@@ -8,14 +8,16 @@ import kotlinx.coroutines.withContext
 import org.koin.core.inject
 import ru.codeoverflow.junctionhack.entity.tours.TourModel
 import ru.codeoverflow.junctionhack.model.interactor.ToursInteractor
+import ru.codeoverflow.junctionhack.model.storage.Cache
 import ru.codeoverflow.junctionhack.viewmodel.BaseViewModel
 
-private const val MAX_TOUR = 10
 private const val ACTIVITIES = 5
 
 class ToursViewModel : BaseViewModel() {
 
     private val interactor: ToursInteractor by inject()
+
+    private val cache: Cache by inject()
 
     val startDay: MutableLiveData<CalendarDay> = MutableLiveData()
     val endDay: MutableLiveData<CalendarDay> = MutableLiveData()
@@ -31,10 +33,15 @@ class ToursViewModel : BaseViewModel() {
         coroutineScope.launch {
             isLoading.postValue(true)
             try {
-                val listActivities = interactor.getActivities()
+                var listActivities = interactor.getActivitiesML(cache.user?.id ?: "")
                 val tours = mutableListOf<TourModel>()
                 // Complete tour from activities
-                for (i in 0..MAX_TOUR) {
+                var tourCount = listActivities.size / ACTIVITIES
+                if (tourCount == 0) {
+                    listActivities = interactor.getActivities()
+                    tourCount = listActivities.size / ACTIVITIES
+                }
+                for (i in 0 until tourCount) {
                     val firstItem = listActivities[i * ACTIVITIES]
                     tours.add(
                         TourModel(

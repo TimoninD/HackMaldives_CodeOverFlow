@@ -15,7 +15,7 @@ class App : Application() {
             androidContext(this@App)
             modules(
                 listOf(
-                    appModule, networkModule, viewModelModule, interactorModule
+                    appModule, networkModule, viewModelModule, interactorModule, networkModuleMl
                 )
             )
         }
