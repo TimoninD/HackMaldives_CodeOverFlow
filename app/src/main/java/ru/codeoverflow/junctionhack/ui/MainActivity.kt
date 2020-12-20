@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         when {
             !prefs.isTestShow -> navGraph.startDestination = R.id.interestsFragment
             !prefs.isBudgetShow -> navGraph.startDestination = R.id.budgetFragment
-            prefs.token != null -> navGraph.startDestination = R.id.homeFragment
+            prefs.token != null && (prefs.token ?: "").isNotBlank()-> navGraph.startDestination = R.id.homeFragment
             else -> navGraph.startDestination = R.id.signInFragment
         }
         navController.graph = navGraph

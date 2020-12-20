@@ -12,6 +12,7 @@ import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.R
 import ru.codeoverflow.junctionhack.ext.hideKeyboard
 import ru.codeoverflow.junctionhack.ext.showSnackbar
+import ru.codeoverflow.junctionhack.ext.updateMarginBottomOnApplySystemWindowInsets
 import ru.codeoverflow.junctionhack.viewmodel.codeconfirm.ConfirmCodeViewModel
 
 private const val PIN_CODE_LENGTH = 4
@@ -25,6 +26,7 @@ class ConfirmCodeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        scrollView.updateMarginBottomOnApplySystemWindowInsets()
 
         showSnackbar(getString(R.string.snackbar_code_notice))
 

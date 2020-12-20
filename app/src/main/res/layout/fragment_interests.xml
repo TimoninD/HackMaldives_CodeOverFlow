@@ -47,8 +47,9 @@
                 android:layout_height="wrap_content"
                 android:overScrollMode="never"
                 android:paddingStart="20dp"
-                android:paddingEnd="32dp"
+                android:paddingEnd="20dp"
                 android:paddingBottom="90dp"
+                tools:listitem="@layout/rv_interests_item"
                 app:layout_constraintTop_toBottomOf="@id/etSearch" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
