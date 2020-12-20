@@ -1,10 +1,11 @@
 package ru.codeoverflow.junctionhack.model.server
 
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.*
+import ru.codeoverflow.junctionhack.entity.DataWrapper
 import ru.codeoverflow.junctionhack.entity.ResponseWrapper
 import ru.codeoverflow.junctionhack.entity.login.LoginRequest
 import ru.codeoverflow.junctionhack.entity.login.PhoneVerifyRequest
+import ru.codeoverflow.junctionhack.entity.profile.User
 
 interface JunctionHackApi {
 
@@ -13,4 +14,13 @@ interface JunctionHackApi {
 
     @POST("users/verify")
     suspend fun verify(@Body body: PhoneVerifyRequest): ResponseWrapper<Boolean>
+
+    @GET("users/me")
+    suspend fun getCurrentUser(): ResponseWrapper<DataWrapper<User>>
+
+    @PATCH("users/{id}")
+    suspend fun updateUser(
+        @Path("id") id: String?,
+        @Body body: User?
+    ): ResponseWrapper<DataWrapper<User>>
 }

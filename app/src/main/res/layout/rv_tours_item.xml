@@ -37,7 +37,7 @@
 
         <TextView
             android:id="@+id/tvTitle"
-            style="@style/TextViewSize14BlackBold"
+            style="@style/TextViewSize14TitleBold"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             tools:text="12 000$"
-            style="@style/TextViewSize13BlackBold"
+            style="@style/TextViewSize13TitleBold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tvRating"
             app:layout_constraintBottom_toBottomOf="@id/tvRating"/>

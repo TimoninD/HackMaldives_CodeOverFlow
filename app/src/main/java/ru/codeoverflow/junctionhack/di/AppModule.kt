@@ -4,6 +4,7 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import ru.codeoverflow.junctionhack.model.Prefs
+import ru.codeoverflow.junctionhack.model.storage.Cache
 import ru.codeoverflow.junctionhack.ui.navigation.NavControllerNavigator
 
 
@@ -15,6 +16,9 @@ val appModule = module {
     }
     //App
     single { Prefs(androidContext()) }
+
+    //Paper
+    single { Cache.PaperCache() }
 }
 
 //Navigation

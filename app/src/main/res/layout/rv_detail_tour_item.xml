@@ -57,7 +57,7 @@
 
     <TextView
         android:id="@+id/tvTitle"
-        style="@style/TextViewSize14BlackBold"
+        style="@style/TextViewSize14TitleBold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"

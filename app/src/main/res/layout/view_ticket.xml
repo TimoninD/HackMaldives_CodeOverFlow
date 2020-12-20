@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/bg_ticket_white">
+
+    <TextView
+        android:id="@+id/tvCityFrom"
+        style="@style/TextViewSize18TitleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="MOW" />
+
+    <TextView
+        android:id="@+id/tvTimeFrom"
+        style="@style/TextViewSize16TitleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="@id/tvCityFrom"
+        app:layout_constraintTop_toBottomOf="@id/tvCityFrom"
+        tools:text="09:00" />
+
+    <TextView
+        android:id="@+id/tvCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintStart_toStartOf="@id/tvTimeFrom"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeFrom"
+        tools:text="Aeroflot" />
+
+    <View
+        android:id="@+id/viewFromCircle"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/bg_circle_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvTimeFrom"
+        app:layout_constraintStart_toEndOf="@id/tvTimeFrom"
+        app:layout_constraintTop_toTopOf="@id/tvTimeFrom" />
+
+    <ImageView
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layerType="software"
+        android:src="@drawable/dotted_line"
+        app:layout_constraintBottom_toBottomOf="@id/viewFromCircle"
+        app:layout_constraintEnd_toStartOf="@id/viewToCircle"
+        app:layout_constraintStart_toEndOf="@id/viewFromCircle"
+        app:layout_constraintTop_toTopOf="@id/viewFromCircle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinePlane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.36" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plane"
+        app:layout_constraintBottom_toBottomOf="@id/viewLine"
+        app:layout_constraintEnd_toEndOf="@id/guidelinePlane"
+        app:layout_constraintStart_toStartOf="@id/guidelinePlane"
+        app:layout_constraintTop_toTopOf="@id/viewLine" />
+
+    <View
+        android:id="@+id/viewToCircle"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_circle_gray"
+        app:layout_constraintBottom_toBottomOf="@id/tvTimeTo"
+        app:layout_constraintEnd_toStartOf="@id/tvTimeTo"
+        app:layout_constraintTop_toTopOf="@id/tvTimeTo" />
+
+    <TextView
+        android:id="@+id/tvCityTo"
+        style="@style/TextViewSize18TitleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="MOW" />
+
+    <TextView
+        android:id="@+id/tvTimeTo"
+        style="@style/TextViewSize16TitleRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="@id/tvCityTo"
+        app:layout_constraintTop_toBottomOf="@id/tvCityTo"
+        tools:text="09:00" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextViewSize18MainBold"
+        tools:text="540$"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvCompany" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

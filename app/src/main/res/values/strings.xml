@@ -18,11 +18,20 @@
     <string name="tours_title">Your tours</string>
     <string name="tours_hint">Where would you like to go?</string>
     <string name="tours_rating">Rating:</string>
+    <string name="tours_price">Total Price:</string>
+    <string name="tours_date_hint">DD-MM</string>
 
     <string name="bottom_menu_tours">Your tours</string>
     <string name="bottom_menu_profile">Profile</string>
+
     <string name="budget_title">Select your budget</string>
+
     <string name="tour_detail_description_label">Description:</string>
+    <string name="tour_detail_favorite">Add to favourites</string>
+    <string name="tour_detail_buy">Buy tour</string>
+    <string name="tour_detail_include_title">What\'s included in the tour?</string>
+    <string name="tour_detail_participants">Number of participants:</string>
+    <string name="tour_detail_tickets_title">Tickets for this tour (included in the price)</string>
 
     <string name="week_sunday">S</string>
     <string name="week_monday">M</string>
@@ -31,9 +40,8 @@
     <string name="week_thursday">T</string>
     <string name="week_friday">F</string>
     <string name="week_saturday">S</string>
-    <string name="tour_detail_include_title">What\'s included in the tour?</string>
-    <string name="tour_detail_participants">Number of participants:</string>
-    <string name="tour_detail_tickets_title">Tickets for this tour (included in the price)</string>
-    <string name="tours_price">Total Price:</string>
-    <string name="tours_date_hint">DD-MM</string>
+    <string name="profile_tickets_title">My tickets</string>
+    <string name="profile_favorite_title">A wish list</string>
+
+
 </resources>
