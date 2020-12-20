@@ -28,7 +28,7 @@ class BudgetFragment : BaseFragment() {
         btnNext.setOnClickListener {
             if (seekBarPrice.getCurrentEndValue() > 0) {
                 prefs.budget = seekBarPrice.getCurrentEndValue()
-                //prefs.isBudgetShow = true
+                prefs.isBudgetShow = true
                 findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToSignInFragment())
             } else {
                 showSnackbar(getString(R.string.snackbar_select_budget_range))

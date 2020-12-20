@@ -51,7 +51,7 @@ class InterestsFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnNext.setOnClickListener {
-            //prefs.isTestShow = true
+            prefs.isTestShow = true
             if (interestSelectedList.isNotEmpty()) {
                 cache.interests = interestSelectedList.map { it.toLowerCase(Locale.getDefault()) }
                 findNavController().navigate(InterestsFragmentDirections.actionInterestsFragmentToBudgetFragment())

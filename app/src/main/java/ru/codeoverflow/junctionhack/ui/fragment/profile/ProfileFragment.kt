@@ -56,10 +56,7 @@ class ProfileFragment : BaseFragment() {
         viewModel.user.observe(viewLifecycleOwner, Observer {
             Glide.with(requireContext())
                 .load(it?.photo)
-                .transform(
-                    RoundedCorners(resources.getDimension(R.dimen.radius_18).toInt()),
-                    CenterCrop()
-                )
+                .circleCrop()
                 .into(ivAvatar)
 
             tvName.text = it.name
