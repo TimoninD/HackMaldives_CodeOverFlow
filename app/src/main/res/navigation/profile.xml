@@ -17,8 +17,8 @@
         android:name="ru.codeoverflow.junctionhack.ui.fragment.detailtour.DetailTourFragment">
 
         <argument
-            android:name="tourId"
-            app:argType="string" />
+            android:name="tourModel"
+            app:argType="ru.codeoverflow.junctionhack.entity.tours.TourModel" />
     </fragment>
 </navigation>
 

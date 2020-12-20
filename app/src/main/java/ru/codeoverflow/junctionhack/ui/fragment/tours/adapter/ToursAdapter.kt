@@ -2,6 +2,7 @@ package ru.codeoverflow.junctionhack.ui.fragment.tours.adapter
 
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import com.bumptech.glide.Glide
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegate
 import kotlinx.android.synthetic.main.rv_tour_month_item.view.*
 import kotlinx.android.synthetic.main.rv_tours_item.view.*
@@ -17,12 +18,18 @@ fun toursAdapterDelegate(onClick: (TourModel) -> Unit) =
 
         bind {
             with(itemView) {
-                ivIcon.setImageResource(R.drawable.start_image)
+                Glide.with(context)
+                    .load(item.image)
+                    .into(ivIcon)
+
                 tvTitle.text = item.title
                 tvDescription.text = item.description
                 tvType.text = item.type
+
                 ratingBar.rating = item.rating.toFloat()
+
                 tvPrice.text = getString(R.string.common_price, item.price)
+
                 setOnClickListener {
                     onClick.invoke(item)
                 }

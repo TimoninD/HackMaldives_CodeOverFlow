@@ -32,7 +32,7 @@ class ProfileFragment : BaseFragment() {
             toursAdapterDelegate {
                 findNavController().navigate(
                     ProfileFragmentDirections.actionProfileFragmentToDetailTourFragment(
-                        it.id
+                        it
                     )
                 )
             }

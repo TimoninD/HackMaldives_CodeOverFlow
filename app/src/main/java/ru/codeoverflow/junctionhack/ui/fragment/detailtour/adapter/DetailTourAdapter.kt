@@ -14,19 +14,18 @@ fun detailTourAdapterDelegate() =
         bind {
             with(itemView) {
                 Glide.with(context)
-                    .load(R.drawable.start_image)
+                    .load(item.images?.firstOrNull() ?: R.drawable.start_image)
                     .circleCrop()
                     .into(ivIcon)
 
                 tvTitle.text = item.title
                 tvDescription.text = item.description
-                tvDate.text = item.date
+                tvDate.text = if ((item.date
+                        ?: "").isNotBlank()
+                ) item.date else "2${absoluteAdapterPosition} Dec 2020"
 
                 if (absoluteAdapterPosition == 0) {
                     viewTopLine.isVisible = false
-                } else if (absoluteAdapterPosition == tourActivitiesSize - 1) {
-                    viewBottomLine.isVisible = false
-                    tvDate.isVisible = false
                 }
             }
         }

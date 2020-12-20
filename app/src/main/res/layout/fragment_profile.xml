@@ -108,6 +108,7 @@
             android:clipToPadding="false"
             android:orientation="vertical"
             android:paddingBottom="16dp"
+            android:overScrollMode="never"
             app:layout_constraintTop_toBottomOf="@id/tvFavoriteTitle"
             tools:listitem="@layout/rv_tours_item" />
 

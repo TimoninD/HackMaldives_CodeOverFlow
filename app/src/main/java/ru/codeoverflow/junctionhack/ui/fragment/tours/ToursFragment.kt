@@ -45,17 +45,11 @@ class ToursFragment : BaseFragment() {
             toursAdapterDelegate {
                 findNavController().navigate(
                     ToursFragmentDirections.actionToursFragmentToDetailTourFragment(
-                        it.id
+                        it
                     )
                 )
             }
-        ).apply {
-            items = listOf(
-                TourModel("1", "", "1", "dbgdbfgdfbgndfgnmfdbgdfgnfgndfg"),
-                TourModel("2", "", "2", "dbgdbfgd2fbgndfgnmfdbgdfgnfgndfg"),
-                TourModel("3", "", "3", "dbgdbfgdf3bgndfgnmfdbgdfgnfgndfg")
-            )
-        }
+        )
     }
 
     private val today = LocalDate.now()
@@ -89,6 +83,15 @@ class ToursFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel.isLoading.observe(viewLifecycleOwner, Observer {
+            progressBar.isVisible = it
+        })
+
+        viewModel.listTours.observe(viewLifecycleOwner, Observer {
+            adapter.items = it
+            adapter.notifyDataSetChanged()
+        })
 
         viewModel.startDay.observe(viewLifecycleOwner, Observer {
             etStartDate.setText(

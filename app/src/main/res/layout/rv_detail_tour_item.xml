@@ -35,25 +35,32 @@
         app:layout_constraintStart_toStartOf="@id/ivIcon"
         app:layout_constraintTop_toTopOf="@id/ivIcon" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivOval"
+        android:layout_marginTop="32dp"/>
+
     <View
         android:id="@+id/viewBottomLine"
         android:layout_width="2dp"
-        android:layout_height="16dp"
+        android:layout_height="0dp"
         android:background="@color/main_color"
         app:layout_constraintEnd_toEndOf="@id/ivIcon"
         app:layout_constraintStart_toStartOf="@id/ivIcon"
-        app:layout_constraintTop_toBottomOf="@id/ivOval" />
+        app:layout_constraintTop_toBottomOf="@id/ivOval"
+        app:layout_constraintBottom_toTopOf="@id/tvDate"/>
 
     <TextView
         android:id="@+id/tvDate"
         style="@style/TextViewSize12Hint"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        app:layout_constraintEnd_toEndOf="@id/viewBottomLine"
-        app:layout_constraintStart_toStartOf="@id/viewBottomLine"
-        app:layout_constraintTop_toBottomOf="@id/viewBottomLine"
-        tools:text="20 December 2020" />
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@id/ivOval"
+        app:layout_constraintStart_toStartOf="@id/ivOval"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="20 Dec 2020" />
 
     <TextView
         android:id="@+id/tvTitle"

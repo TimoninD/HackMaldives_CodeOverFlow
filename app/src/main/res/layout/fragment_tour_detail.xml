@@ -15,7 +15,9 @@
             android:id="@+id/ivIcon"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:src="@color/black"
+            tools:src="@color/black_50"
+            android:scaleType="center"
+            android:adjustViewBounds="true"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,9 +148,11 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTourStep"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
+            android:overScrollMode="never"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/tvIncludeTitle"
             tools:itemCount="5"
