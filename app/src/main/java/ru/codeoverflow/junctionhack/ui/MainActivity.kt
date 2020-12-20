@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         if (mainActivityNavHostFragment.findNavController().currentDestination?.id == R.id.homeFragment) {
             if ((mainActivityNavHostFragment.childFragmentManager.fragments[0] as BaseFragment).onBackPressed()) {
-                super.onBackPressed()
+                return
             }
         } else {
             super.onBackPressed()
