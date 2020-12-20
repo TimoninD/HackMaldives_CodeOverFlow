@@ -48,7 +48,7 @@ fun toursMonthAdapterDelegate(onClick: (item: YearMonth, position: Int) -> Unit)
                     monthSelectedPosition = absoluteAdapterPosition
                     onClick.invoke(item, absoluteAdapterPosition)
                 }
-                tvMonth.text = item.month.getDisplayName(TextStyle.FULL, Locale.getDefault())
+                tvMonth.text = item.month.getDisplayName(TextStyle.FULL, Locale.ENGLISH)
                 if (monthSelectedPosition == absoluteAdapterPosition) {
                     tvMonth.setTextColor(ContextCompat.getColor(context, R.color.main_color))
                     tvMonth.typeface = ResourcesCompat.getFont(context, R.font.monsterrat_bold)

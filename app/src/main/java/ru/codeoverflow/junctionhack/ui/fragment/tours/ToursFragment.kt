@@ -98,7 +98,7 @@ class ToursFragment : BaseFragment() {
                 getString(
                     R.string.common_date,
                     it.day,
-                    it.date.month.getDisplayName(TextStyle.SHORT, Locale.getDefault())
+                    it.date.month.getDisplayName(TextStyle.SHORT, Locale.ENGLISH)
                 )
             )
             calendarView.notifyCalendarChanged()
@@ -112,7 +112,7 @@ class ToursFragment : BaseFragment() {
                 getString(
                     R.string.common_date,
                     it.day,
-                    it.date.month.getDisplayName(TextStyle.SHORT, Locale.getDefault())
+                    it.date.month.getDisplayName(TextStyle.SHORT, Locale.ENGLISH)
                 )
             )
             calendarView.notifyCalendarChanged()
