@@ -41,6 +41,7 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             app:layout_constraintBottom_toTopOf="@id/viewBackground"
+            app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/viewBackground"
@@ -79,13 +80,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvGeo" />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <include
             android:id="@+id/rvTickets"
+            layout="@layout/view_ticket"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/view_ticket"
-            tools:itemCount="2"
-            app:layout_constraintTop_toBottomOf="@id/tvTicketsTitle" />
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvTicketsTitle"/>
 
         <TextView
             android:id="@+id/tvFavoriteTitle"
@@ -107,6 +109,16 @@
             android:paddingBottom="16dp"
             app:layout_constraintTop_toBottomOf="@id/tvFavoriteTitle"
             tools:listitem="@layout/rv_tours_item" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

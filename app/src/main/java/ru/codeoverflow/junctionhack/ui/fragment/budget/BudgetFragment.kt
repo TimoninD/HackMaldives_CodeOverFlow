@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.fragment_budget.*
 import org.koin.android.ext.android.inject
 import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.R
+import ru.codeoverflow.junctionhack.ext.showSnackbar
 import ru.codeoverflow.junctionhack.model.Prefs
 import ru.codeoverflow.junctionhack.ui.view.RubberRangePicker
 
@@ -25,9 +26,13 @@ class BudgetFragment : BaseFragment() {
         )
 
         btnNext.setOnClickListener {
-            prefs.budget = seekBarPrice.getCurrentEndValue()
-            //prefs.isBudgetShow = true
-            findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToSignInFragment())
+            if (seekBarPrice.getCurrentEndValue() > 0) {
+                prefs.budget = seekBarPrice.getCurrentEndValue()
+                //prefs.isBudgetShow = true
+                findNavController().navigate(BudgetFragmentDirections.actionBudgetFragmentToSignInFragment())
+            } else {
+                showSnackbar(getString(R.string.snackbar_select_budget_range))
+            }
         }
 
         seekBarPrice.setOnRubberRangePickerChangeListener(object :

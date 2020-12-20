@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
@@ -17,7 +16,7 @@
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="MOW" />
+        android:text="MOW" />
 
     <TextView
         android:id="@+id/tvTimeFrom"
@@ -27,7 +26,7 @@
         android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="@id/tvCityFrom"
         app:layout_constraintTop_toBottomOf="@id/tvCityFrom"
-        tools:text="09:00" />
+        android:text="09:00" />
 
     <TextView
         android:id="@+id/tvCompany"
@@ -37,7 +36,7 @@
         android:paddingBottom="12dp"
         app:layout_constraintStart_toStartOf="@id/tvTimeFrom"
         app:layout_constraintTop_toBottomOf="@id/tvTimeFrom"
-        tools:text="Aeroflot" />
+        android:text="Aeroflot" />
 
     <View
         android:id="@+id/viewFromCircle"
@@ -95,7 +94,7 @@
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="MOW" />
+        android:text="MAL" />
 
     <TextView
         android:id="@+id/tvTimeTo"
@@ -105,14 +104,14 @@
         android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="@id/tvCityTo"
         app:layout_constraintTop_toBottomOf="@id/tvCityTo"
-        tools:text="09:00" />
+        android:text="09:00" />
 
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TextViewSize18MainBold"
-        tools:text="540$"
+        android:text="540$"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvCompany" />

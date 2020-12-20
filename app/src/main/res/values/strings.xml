@@ -8,6 +8,11 @@
     <string name="common_date">%d %s</string>
     <string name="common_search">Search</string>
 
+    <string name="snackbar_work_in_progress">Work in progress</string>
+    <string name="snackbar_select_interests">Select interests</string>
+    <string name="snackbar_select_budget_range">Select budget range</string>
+    <string name="snackbar_code_notice">Write any code</string>
+
     <string name="start_hello">Hi, friend!</string>
     <string name="start_title">Travel with us!</string>
 

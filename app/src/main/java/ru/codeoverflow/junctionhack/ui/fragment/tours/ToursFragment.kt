@@ -20,6 +20,7 @@ import ru.codeoverflow.junctionhack.R
 import ru.codeoverflow.junctionhack.entity.tours.TourModel
 import ru.codeoverflow.junctionhack.ext.attachSnapHelperWithListener
 import ru.codeoverflow.junctionhack.ext.hideKeyboard
+import ru.codeoverflow.junctionhack.ext.showSnackbar
 import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.ui.fragment.tours.adapter.monthSelectedPosition
 import ru.codeoverflow.junctionhack.ui.fragment.tours.adapter.toursAdapterDelegate
@@ -179,6 +180,11 @@ class ToursFragment : BaseFragment() {
         val textView = container.textView
         textView.text = day.date.dayOfMonth.toString()
 
+        btnChange.setOnClickListener {
+            groupCalendar.isVisible = false
+            showSnackbar(getString(R.string.snackbar_work_in_progress), parentFragment?.view)
+        }
+
         if (day.date.isBefore(today)) {
             textView.setTextColor(
                 ContextCompat.getColor(
@@ -189,6 +195,9 @@ class ToursFragment : BaseFragment() {
             textView.setBackgroundResource(0)
         } else {
             container.isClickable = true
+            if (viewModel.startDay.value != null && day.date.isBefore(viewModel.startDay.value?.date)) {
+                container.isClickable = false
+            }
             when {
                 viewModel.startDay.value == null && viewModel.endDay.value == null ->
                     textView.setBackgroundResource(0)

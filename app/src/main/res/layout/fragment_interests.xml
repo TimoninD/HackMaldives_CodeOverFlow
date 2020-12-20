@@ -45,6 +45,7 @@
                 android:id="@+id/rvInterests"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:overScrollMode="never"
                 android:paddingStart="20dp"
                 android:paddingEnd="32dp"
                 android:paddingBottom="90dp"

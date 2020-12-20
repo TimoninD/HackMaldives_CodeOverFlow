@@ -5,6 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.koin.core.inject
+import ru.codeoverflow.junctionhack.entity.profile.Location
 import ru.codeoverflow.junctionhack.model.Prefs
 import ru.codeoverflow.junctionhack.model.interactor.AuthInteractor
 import ru.codeoverflow.junctionhack.model.storage.Cache
@@ -33,7 +34,10 @@ class ConfirmCodeViewModel : BaseViewModel() {
                 cache.interests?.let {
                     user = user?.copy(
                         interests = cache.interests ?: listOf(),
-                        budget = prefs.budget
+                        budget = prefs.budget,
+                        photo = "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?size=626&ext=jpg",
+                        name = "Ekaterina Nosova",
+                        location = Location("Moscow, Russia") //TODO:Hardcode
                     )
                     cache.interests = null
                     interactor.updateUser(user)

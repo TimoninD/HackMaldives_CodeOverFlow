@@ -10,6 +10,7 @@ import org.koin.android.ext.android.inject
 import ru.codeoverflow.junctionhack.ui.common.BaseFragment
 import ru.codeoverflow.junctionhack.R
 import ru.codeoverflow.junctionhack.entity.interests.Interest
+import ru.codeoverflow.junctionhack.ext.showSnackbar
 import ru.codeoverflow.junctionhack.model.Prefs
 import ru.codeoverflow.junctionhack.model.storage.Cache
 import ru.codeoverflow.junctionhack.ui.fragment.interests.adapter.interestSelectedList
@@ -44,8 +45,12 @@ class InterestsFragment : BaseFragment() {
 
         btnNext.setOnClickListener {
             //prefs.isTestShow = true
-            cache.interests = interestSelectedList
-            findNavController().navigate(InterestsFragmentDirections.actionInterestsFragmentToBudgetFragment())
+            if (interestSelectedList.isNotEmpty()) {
+                cache.interests = interestSelectedList
+                findNavController().navigate(InterestsFragmentDirections.actionInterestsFragmentToBudgetFragment())
+            } else {
+                showSnackbar(getString(R.string.snackbar_select_interests))
+            }
         }
 
         rvInterests.layoutManager = GridLayoutManager(requireContext(), SPAN_COUNT)
